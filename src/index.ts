@@ -1,6 +1,18 @@
-const sayHi = (name: string, age: number, gender: string): string => {
-  return `hello ${name}, you are ${age}, ${gender}`
+interface Human {
+  name: string
+  age: number
+  gender: string
 }
 
-const data = sayHi('gildong', 30, 'male')
+const person = {
+  name: '철수',
+  age: 30,
+  gender: 'male',
+}
+
+const sayHi = (person: Human): string => {
+  return `hello ${person.name}, you are ${person.age}, ${person.gender}!!`
+}
+
+const data = sayHi(person)
 console.log(data)
